@@ -39,7 +39,6 @@ public class Task_1 {
         } else {
             System.out.println("Log in failed");
         }
-
         WebElement batch = driver.findElement(By.cssSelector("span[class='subtitle-2 text-none pl-2 pr-3 gray--text text--darken-3']"));
 
         batch.click();
@@ -48,13 +47,11 @@ public class Task_1 {
         logout.click();
 
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("h1[class='text-h5 font-weight-medium mb-6']")));
-
         if (driver.getCurrentUrl().contains(DocuportConstants.USER_LOGIN_PAGE)) {
             System.out.println("Log out is successful");
         } else {
             System.out.println("Log out failed");
         }
-
         driver.quit();
     }
 }

@@ -14,7 +14,6 @@ public class Task_2 {
         WebDriver driver = WebDriverFactory.getDriver("chrome");
         driver.get("https://beta.docuport.app/login");
         driver.manage().window().maximize();
-
         WebElement username = driver.findElement(By.cssSelector("label[for='input-14']"));
         String actual_username = username.getText();
         String expected_username = "Username or email";
@@ -23,7 +22,6 @@ public class Task_2 {
         } else {
             System.out.println("Expected logo text: " + expected_username + ", DOES NOT MATCH actual logo text: "  + actual_username + ", => TEST FAIL");
         }
-
         WebElement password = driver.findElement(By.cssSelector("label[for='input-15']"));
         String actual_password = password.getText();
         String expected_password = "Password";
@@ -32,14 +30,10 @@ public class Task_2 {
         } else {
             System.out.println("Expected logo text: " + expected_password + ", DOES NOT MATCH actual logo text: "  + actual_password + ", => TEST FAIL");
         }
-
         WebElement log_in = driver.findElement(By.cssSelector("span[class='v-btn__content']"));
         log_in.click();
-
         WebDriverWait wait =new WebDriverWait(driver, Duration.ofMillis(5000));
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[.='Please enter your username or email address']")));
-
-
         WebElement error_username = driver.findElement(By.xpath("//*[.='Please enter your username or email address']"));
         String actual_error_username = error_username.getText();
         String expected_error_username = "Please enter your username or email address";
@@ -48,7 +42,6 @@ public class Task_2 {
         } else {
             System.out.println("Expected logo text: " + expected_error_username + ", DOES NOT MATCH actual logo text: "  + actual_error_username + ", => TEST FAIL");
         }
-
         WebElement error_password = driver.findElement(By.xpath("//*[.='Please enter your password']"));
         String actual_error_password = error_password.getText();
         String expected_error_password = "Please enter your password";
@@ -57,8 +50,6 @@ public class Task_2 {
         } else {
             System.out.println("Expected logo text: " + expected_error_password + ", DOES NOT MATCH actual logo text: "  + actual_error_password + ", => TEST FAIL");
         }
-
-
         driver.quit();
 
 
