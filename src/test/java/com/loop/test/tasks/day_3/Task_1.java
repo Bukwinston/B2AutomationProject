@@ -2,13 +2,10 @@ package com.loop.test.tasks.day_3;
 
 import com.loop.test.utilities.DocuportConstants;
 import com.loop.test.utilities.WebDriverFactory;
-import dev.failsafe.internal.util.Assert;
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import javax.lang.model.element.Element;
 import java.time.Duration;
 
 import static org.testng.Assert.assertEquals;
@@ -21,7 +18,7 @@ public class Task_1 {
         driver.manage().window().maximize();
 
         WebElement username = driver.findElement(By.id("input-14"));
-        username.sendKeys(DocuportConstants.ESERNAME_EMPLOYEE);
+        username.sendKeys(DocuportConstants.EUSERNAME_EMPLOYEE);
         username.sendKeys(Keys.TAB);
 
         WebElement password = driver.findElement(By.cssSelector("input[type='password']"));
