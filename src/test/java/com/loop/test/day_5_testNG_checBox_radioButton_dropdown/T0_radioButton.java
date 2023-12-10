@@ -1,14 +1,15 @@
 package com.loop.test.day_5_testNG_checBox_radioButton_dropdown;
 
 import com.loop.test.utilities.WebDriverFactory;
-import net.bytebuddy.implementation.bytecode.Throw;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import java.time.Duration;
 
+
 public class T0_radioButton {
+
+
     public static void main(String[] args) throws InterruptedException {
         /*
         https://demoqa.com/radio-button
