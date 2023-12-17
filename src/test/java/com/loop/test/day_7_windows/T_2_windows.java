@@ -3,6 +3,7 @@ package com.loop.test.day_7_windows;
 import com.loop.test.base.TestBase;
 import com.loop.test.utilities.BrowserUtils;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import java.util.Set;
@@ -42,6 +43,10 @@ public class T_2_windows extends TestBase {
 //        }
 
         BrowserUtils.switchWindowAndValidate(driver, "facebook.com", "facebook");
+        BrowserUtils.switchToWindow(driver, "facebook");
     }
+
+
+
 
 }
