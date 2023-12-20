@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 
 public class TestBase {
 
-    public WebDriver driver;
+    public static WebDriver driver;
     @BeforeMethod
     public void setUpMethod(){
         driver = WebDriverFactory.getDriver("chrome");
