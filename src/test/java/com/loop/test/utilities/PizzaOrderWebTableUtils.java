@@ -46,7 +46,7 @@ public static String returnAnyFieldValue(WebDriver driver, String name, String f
 }
 
 /**
- *
+ *validate information about pizza order for each client
  */
 public static void orderInfoemation(String name,String type,String amount, String date, String street,
                                     String city, String state, String zip, String card, String cardNumber, String expiration){
