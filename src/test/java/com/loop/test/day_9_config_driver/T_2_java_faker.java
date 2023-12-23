@@ -17,6 +17,7 @@ public class T_2_java_faker {
         System.out.println("faker.chuckNorris().fact() = " + faker.chuckNorris().fact());
         System.out.println("faker.chuckNorris().fact().replace(\"Chuck Norris\", \"Feyruz\") = " + faker.chuckNorris().fact().replace("Chuck Norris", "Feyruz"));
 
-
+        System.out.println("faker.internet() = " + faker.internet().emailAddress());
+        System.out.println("faker.phoneNumber().cellPhone() = " + faker.phoneNumber().cellPhone());
     }
 }
