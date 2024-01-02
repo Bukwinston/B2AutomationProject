@@ -3,8 +3,13 @@ import com.loop.pages.LoopPracticeDynamicLoading1;
 import com.loop.test.utilities.BrowserUtils;
 import com.loop.test.utilities.ConfigurationReader;
 import com.loop.test.utilities.Driver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.util.List;
+
 import static org.testng.Assert.assertTrue;
 
 public class T_3_dynamic_loading1 {
@@ -28,6 +33,8 @@ public class T_3_dynamic_loading1 {
         loopPracticeDynamicLoading1.password.sendKeys(ConfigurationReader.getProperty("dynamicLoading.incorrectPassword"));
         loopPracticeDynamicLoading1.submitButton.click();
         loopPracticeDynamicLoading1.errorMessage.isDisplayed();
+
+
     }
 
 }
