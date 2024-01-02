@@ -57,10 +57,6 @@ public class T_1_drag_drop_pom {
     @Test
     public void drag_and_hold(){
         actions.clickAndHold(LoopPracticeDragDropPage.smallCircle).moveByOffset(100, 100).perform();
-//        actions.moveToElement(LoopPracticeDragDropPage.smallCircle)
-//                .clickAndHold()
-//                .moveByOffset(100, 100)
-//                .pause(2000).perform();
         assertEquals(LoopPracticeDragDropPage.bigCircle.getText(), "Drop here.", "Actual DOES NOT match expected");
     }
 

@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class LoopPracticeDynamicLoading1 {
 
     public LoopPracticeDynamicLoading1(){
@@ -31,5 +33,8 @@ public class LoopPracticeDynamicLoading1 {
 
     @FindBy(id = "flash-messages")
     public WebElement errorMessage;
+
+    @FindBy(tagName = "a")
+    public List<WebElement> testlist;
 
 }

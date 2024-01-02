@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.Set;
 
 import static org.testng.Assert.assertTrue;
@@ -166,6 +167,18 @@ public class BrowserUtils {
         } catch (InterruptedException e){
             e.printStackTrace();
         }
+    }
+
+    /**
+     * print out each link text on webpage
+     * @param element
+     * @author bukwinton
+     */
+public static WebElement printLinks(WebElement element){
+    List<WebElement> allList = Driver.getDriver().findElements(By.tagName("a"));
+        for (WebElement each : allList){
+            System.out.println(each.getText());}
+      return element;
     }
 
 
