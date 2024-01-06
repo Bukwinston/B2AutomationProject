@@ -53,25 +53,21 @@ public class T_1_drag_drop_pom {
         String actual = LoopPracticeDragDropPage.bigCircle.getText();
         assertEquals(actual, expected, "Actual DOES NOT match expected");
     }
-
     @Test
     public void drag_and_hold(){
         actions.clickAndHold(LoopPracticeDragDropPage.smallCircle).moveByOffset(100, 100).perform();
         assertEquals(LoopPracticeDragDropPage.bigCircle.getText(), "Drop here.", "Actual DOES NOT match expected");
     }
-
     @Test
     public void moveToBigCircle(){
         actions.clickAndHold(LoopPracticeDragDropPage.smallCircle).moveToElement(LoopPracticeDragDropPage.bigCircle).perform();
         assertEquals(LoopPracticeDragDropPage.bigCircle.getText(), "Now drop...", "Actual DOES NOT match expected");
     }
-
     @Test
     public void dropAnywhere(){
         actions.dragAndDrop(LoopPracticeDragDropPage.smallCircle, LoopPracticeDragDropPage.logo).perform();
         assertEquals(LoopPracticeDragDropPage.bigCircle.getText(), "Try again!", "Actual DOES NOT match expected");
     }
-
     @AfterClass
     public void tearDown(){
         Driver.getDriver().close();

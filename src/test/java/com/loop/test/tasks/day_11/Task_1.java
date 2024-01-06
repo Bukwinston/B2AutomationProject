@@ -14,7 +14,6 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 import java.util.List;
-
 public class Task_1 {
 
     SecureSmartBear secureSmartBear;
