@@ -32,9 +32,14 @@ public class Task_1 {
     @BeforeMethod
     public void setUpMethod() {
         secureSmartBear = new SecureSmartBear();
-        Driver.getDriver().get(ConfigurationReader.getProperty("secure.smartbear"));}
+        Driver.getDriver().get(ConfigurationReader.getProperty("secure.smartbear"));
+    }
+
     @AfterTest
-    public void tearDown() {Driver.getDriver().close();}
+    public void tearDown() {
+        Driver.getDriver().close();
+    }
+
     @Test
     public void testOrder() {
         secureSmartBear.username.sendKeys(ConfigurationReader.getProperty("secure.smartbear.username"));
@@ -59,7 +64,9 @@ public class Task_1 {
         SimpleDateFormat sdf = new SimpleDateFormat("MM/yy");
         String dob = sdf.format(faker.date().birthday(-5, -1));
         secureSmartBear.expDate.sendKeys(dob);
+
         secureSmartBear.processButton.click();
         assertEquals(secureSmartBear.verifyMessage.getText(), "New order has been successfully added.", "Actual message DOES NOT match expected");
+
     }
 }
